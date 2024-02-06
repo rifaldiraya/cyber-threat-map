@@ -36,3 +36,135 @@
     transform: rotate(360deg);
   }
 }
+
+.img-hero {
+  animation: float 100s ease-in-out;
+}
+
+/* BLINK */
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.blinking-chars {
+  font-family: var(--text-font-family);
+  font-size: var(--text-size);
+}
+
+.blinking-chars-group .char {
+  animation: blink var(--text-animation-speed) infinite alternate;
+  opacity: 0;
+}
+
+.blinking-chars .char:nth-child(1) {
+  animation-delay: calc(var(--text-animation-speed) * 0);
+}
+
+.blinking-chars .char:nth-child(2) {
+  animation-delay: calc(var(--text-animation-speed) * 0.2);
+}
+
+.blinking-chars .char:nth-child(3) {
+  animation-delay: calc(var(--text-animation-speed) * 0.4);
+}
+
+.blinking-chars .char:nth-child(4) {
+  animation-delay: calc(var(--text-animation-speed) * 0.6);
+}
+
+.blinking-chars .char:nth-child(5) {
+  animation-delay: calc(var(--text-animation-speed) * 0.8);
+}
+
+/* SPIN */
+@keyframes spin {
+  0%,
+  5% {
+    /* transform: translate(575px, 415px) scale(2.5); */
+  }
+  0% {
+    
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  100% {
+    /* transform: translate(575px, 900px) scale(2); */
+    opacity: 0;
+  }
+}
+
+:root {
+  --spinner-body-bg: #d1d8e0;
+  --spinner-animation-speed: 1s;
+  --spinner-color: #8854d0;
+  --text-animation-speed: 1s;
+}
+
+.spinner {
+  animation: spin var(--spinner-animation-speed) linear infinite;
+}
+
+.spinner .spinner-gradient-stop {
+  stop-color: var(--spinner-color);
+}
+
+/* DRAW */
+.drawable-illustration path:not([fill="none"]) {
+  fill: transparent;
+  stroke-width: 0.25;
+  stroke: currentColor;
+  animation: draw 2s forwards;
+}
+
+.drawable-illustration path:nth-child(1) {
+  stroke-dasharray: 61.9942626953125;
+  stroke-dashoffset: 61.9942626953125;
+}
+
+.drawable-illustration path:nth-child(2) {
+  stroke-dasharray: 18.852230072021484;
+  stroke-dashoffset: 18.852230072021484;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* DASH */
+.dash  {
+  stroke-dasharray: 210;
+  stroke-dashoffset: 210;
+  animation: dash 2s forwards infinite;
+}
+
+.dash svg g {
+  animation: fill-in 2s 2s infinite;
+  fill-opacity: 0;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill-in {
+  to {
+    fill-opacity: 1;
+  }
+}
+
+/* svg circle {
+  display: none;
+} */
