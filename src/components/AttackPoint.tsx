@@ -14,7 +14,7 @@ export default function AttackPoint({ from, to }: TAttackPoint) {
         <circle r={1} fill="green" />
       </Marker>
 
-      <Marker coordinates={to}>
+      <Marker className="marker" coordinates={to}>
         <circle r={1} fill="red" />
       </Marker>
       {/* <svg className="dash" height="210" width="300" xmlns="http://www.w3.org/2000/svg">

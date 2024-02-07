@@ -89,7 +89,6 @@
     /* transform: translate(575px, 415px) scale(2.5); */
   }
   0% {
-    
     stroke-dashoffset: 0;
     opacity: 0;
   }
@@ -142,7 +141,7 @@
 }
 
 /* DASH */
-.dash  {
+.dash {
   stroke-dasharray: 210;
   stroke-dashoffset: 210;
   animation: dash 2s forwards infinite;
@@ -165,6 +164,19 @@
   }
 }
 
-/* svg circle {
-  display: none;
-} */
+/* MARKER */
+@keyframes markerappear {
+  0% {
+    opacity: 0;
+  }
+  96%,
+  100% {
+    opacity: 1;
+  }
+}
+
+.marker {
+  opacity: 0;
+  animation: markerappear 2s infinite;
+  animation-fill-mode: forwards;
+}
