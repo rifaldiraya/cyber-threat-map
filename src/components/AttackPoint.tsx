@@ -6,10 +6,10 @@ import { useDebounce } from "../hooks/useDebounce";
 type TAttackPoint = {
   from: any;
   to: any;
+  color: string;
 };
 
-export default function AttackPoint({ from, to }: TAttackPoint) {
-
+export default function AttackPoint({ from, to, color }: TAttackPoint) {
   return (
     <>
       {/* <Marker coordinates={from}>
@@ -19,12 +19,12 @@ export default function AttackPoint({ from, to }: TAttackPoint) {
       <Marker className="marker" coordinates={to}>
         <g id="content">
           <g className="cls-1">
-            <circle className="cls-2" r={6} />
+            <circle className="cls-2" style={{ fill: color }} r={6} />
           </g>
           {/* <g className="cls-3">
             <path className="cls-2" d="M18,30A12,12,0,1,1,30,18,12,12,0,0,1,18,30ZM18,8.05A10,10,0,1,0,28,18,10,10,0,0,0,18,8.05Z" />
           </g> */}
-          <circle className="cls-2" r={2} />
+          <circle className="cls-2" style={{ fill: color }} r={2} />
         </g>
       </Marker>
 
@@ -32,7 +32,7 @@ export default function AttackPoint({ from, to }: TAttackPoint) {
         className="dash"
         onClick={(e) => console.log(e)}
         fill="transparent"
-        style={{ color: "#FEB62D", borderColor: "blue", strokeWidth: 1 }}
+        style={{ color, borderColor: "blue", strokeWidth: 1 }}
         from={from}
         to={to}
       />
