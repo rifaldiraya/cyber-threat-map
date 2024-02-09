@@ -8,9 +8,11 @@ const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/wo
 
 export default function Map() {
   const [attackTemp, setAttackTemp] = useState(0);
+  const [attackMultipleTemp, setAttackMultipleTemp] = useState(0);
 
   setTimeout(function () {
     setAttackTemp(Math.floor(Math.random() * 5));
+    setAttackMultipleTemp(Math.floor(Math.random() * 5));
   }, 3000);
 
   const DisplayAttack = useCallback(
@@ -22,6 +24,17 @@ export default function Map() {
       />
     ),
     [attackTemp]
+  );
+
+  const DisplayMultipleAttack = useCallback(
+    () => (
+      <AttackPoint
+        color={dummyCoordinate[attackMultipleTemp].color}
+        from={dummyCoordinate[attackMultipleTemp].coordinate.from}
+        to={dummyCoordinate[attackMultipleTemp].coordinate.to}
+      />
+    ),
+    [attackMultipleTemp]
   );
 
   return (
@@ -53,6 +66,7 @@ export default function Map() {
           }
         </Geographies>
         <DisplayAttack />
+        <DisplayMultipleAttack />
       </ComposableMap>
     </div>
   );
