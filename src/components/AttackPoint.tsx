@@ -1,5 +1,5 @@
 import React, { forwardRef, useState } from "react";
-import { ComposableMap, Geographies, Geography, Line, Marker } from "react-simple-maps";
+import { Annotation, ComposableMap, Geographies, Geography, Line, Marker } from "react-simple-maps";
 import { motion, useTime, useTransform } from "framer-motion";
 import { useDebounce } from "../hooks/useDebounce";
 
@@ -7,23 +7,58 @@ type TAttackPoint = {
   from: any;
   to: any;
   color: string;
+  city: any;
 };
 
-export default function AttackPoint({ from, to, color }: TAttackPoint) {
+export default function AttackPoint({ from, to, color, city }: TAttackPoint) {
   return (
     <>
+      {/* FROM MARKER */}
       {/* <Marker coordinates={from}>
         <circle r={1} fill="green" />
       </Marker> */}
+
+      <Annotation
+        subject={from}
+        dx={-10}
+        dy={-10}
+        connectorProps={{
+          stroke: "#FF5533",
+          strokeWidth: 0,
+          strokeLinecap: "round",
+        }}
+      >
+        <text x="-8" y={-8} fill="white" fontSize={4}>
+          Attack from
+        </text>
+        <text x="-8" fill="white" fontSize={6}>
+          {city.from}
+        </text>
+      </Annotation>
+
+      <Annotation
+        subject={to}
+        dx={-10}
+        dy={-10}
+        connectorProps={{
+          stroke: "#FF5533",
+          strokeWidth: 0,
+          strokeLinecap: "round",
+        }}
+      >
+        <text x="-8" y={-8} fill="white" fontSize={4}>
+          Attack to
+        </text>
+        <text x="-8" fill="white" fontSize={6}>
+          {city.to}
+        </text>
+      </Annotation>
 
       <Marker className="marker" coordinates={to}>
         <g id="content">
           <g className="cls-1">
             <circle className="cls-2" style={{ fill: color }} r={6} />
           </g>
-          {/* <g className="cls-3">
-            <path className="cls-2" d="M18,30A12,12,0,1,1,30,18,12,12,0,0,1,18,30ZM18,8.05A10,10,0,1,0,28,18,10,10,0,0,0,18,8.05Z" />
-          </g> */}
           <circle className="cls-2" style={{ fill: color }} r={2} />
         </g>
       </Marker>

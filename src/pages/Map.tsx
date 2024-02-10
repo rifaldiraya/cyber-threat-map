@@ -13,11 +13,12 @@ export default function Map() {
   setTimeout(function () {
     setAttackTemp(Math.floor(Math.random() * 5));
     setAttackMultipleTemp(Math.floor(Math.random() * 5));
-  }, 3000);
+  }, 2000);
 
   const DisplayAttack = useCallback(
     () => (
       <AttackPoint
+        city={dummyCoordinate[attackTemp].city}
         color={dummyCoordinate[attackTemp].color}
         from={dummyCoordinate[attackTemp].coordinate.from}
         to={dummyCoordinate[attackTemp].coordinate.to}
@@ -29,6 +30,7 @@ export default function Map() {
   const DisplayMultipleAttack = useCallback(
     () => (
       <AttackPoint
+        city={dummyCoordinate[attackTemp].city}
         color={dummyCoordinate[attackMultipleTemp].color}
         from={dummyCoordinate[attackMultipleTemp].coordinate.from}
         to={dummyCoordinate[attackMultipleTemp].coordinate.to}

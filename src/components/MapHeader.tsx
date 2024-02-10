@@ -10,7 +10,6 @@ export default function MapHeader() {
         zIndex: 999,
         position: "absolute",
         display: "flex",
-
         marginTop: "16px",
         flexDirection: "column",
       }}
