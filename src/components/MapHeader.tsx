@@ -10,12 +10,12 @@ export default function MapHeader() {
         zIndex: 999,
         position: "absolute",
         display: "flex",
-        marginTop: "16px",
+        marginTop: "6px",
         flexDirection: "column",
       }}
     >
-      <div style={{ fontSize: "32px", fontWeight: "bold" }}>GLOBAL CYBER THREAT MAP</div>
-      <div style={{ fontSize: "24px", color: "#B3B3B3" }}>Navigating the Digital Battlefield</div>
+      <div style={{ fontSize: "24px", fontWeight: "bold" }}>GLOBAL CYBER THREAT MAP</div>
+      <div style={{ fontSize: "18px", color: "#B3B3B3" }}>Navigating the Digital Battlefield</div>
     </div>
   );
 }

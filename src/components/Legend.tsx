@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Box, Button, Collapse } from "@mui/material";
-import { Add, Minimize } from "@mui/icons-material";
 import { mapLegends } from "../utils/dummy";
 
 export default function Legend() {
@@ -9,13 +8,12 @@ export default function Legend() {
     <Box
       sx={{
         width: "200px",
-        // height: "290px",
         color: "white",
         zIndex: 999,
         position: "absolute",
         marginLeft: "24px",
         padding: "12px",
-        bottom: "-180px",
+        bottom: "180px",
         left: "0px",
         backgroundColor: "#161618",
       }}
@@ -35,11 +33,12 @@ export default function Legend() {
               display: "flex",
               gap: "6px",
               p: "6px",
+              height: "14px",
               mb: "3px",
               backgroundColor: "#212121",
             }}
           >
-            <Box>{legend.icon}</Box>
+            <img width='14px' src={legend.icon} alt={legend.name} />
             <Box>{legend.name}</Box>
           </Box>
         ))}

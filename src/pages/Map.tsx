@@ -4,6 +4,8 @@ import AttackPoint from "../components/AttackPoint";
 import { dummyCoordinate } from "../utils/dummy";
 import MapHeader from "../components/MapHeader";
 import Legend from "../components/Legend";
+import AttackDetail from "../components/AttackDetail";
+import { Box } from "@mui/material";
 
 const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
@@ -41,10 +43,11 @@ export default function Map() {
   );
 
   return (
-    <div>
+    <Box sx={{ width: "100%", height: "100%" }}>
       <MapHeader />
       <Legend />
-      <ComposableMap style={{ backgroundColor: "#141318" }}>
+      <AttackDetail />
+      <ComposableMap style={{ width: "100%", height: "100vh", backgroundColor: "#141318" }}>
         <Geographies geography="/features.json">
           {({ geographies }) =>
             geographies.map((geo: any) => (
@@ -72,6 +75,6 @@ export default function Map() {
         <DisplayAttack />
         <DisplayMultipleAttack />
       </ComposableMap>
-    </div>
+    </Box>
   );
 }
