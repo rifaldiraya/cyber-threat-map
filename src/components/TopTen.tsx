@@ -6,16 +6,16 @@ export type TTopTenProps = {
   title: string;
   data: string[];
   icon: string;
+  iconicColor: string;
 };
 
-export default function TopTen({ title, data, icon }: TTopTenProps) {
+export default function TopTen({ title, data, icon, iconicColor }: TTopTenProps) {
   return (
     <Box
       sx={{
-        width: "160px",
+        width: "100%",
         color: "white",
         zIndex: 999,
-        position: "absolute",
         marginLeft: "24px",
         padding: "12px",
         backgroundColor: "#161618",
@@ -26,18 +26,20 @@ export default function TopTen({ title, data, icon }: TTopTenProps) {
         <Box>{title}</Box>
       </Box>
 
-      {data.map((attack) => (
+      {data.map((attack, index) => (
         <Box
           sx={{
             fontSize: "8px",
             display: "flex",
             gap: "6px",
-            p: "6px",
             mb: "3px",
             backgroundColor: "#212121",
           }}
         >
-          <Box>{attack}</Box>
+          <Box sx={{ width: "24px", backgroundColor: iconicColor, display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <Box>{index + 1}</Box>
+          </Box>
+          <Box sx={{ p: "6px" }}>{attack}</Box>
         </Box>
       ))}
     </Box>

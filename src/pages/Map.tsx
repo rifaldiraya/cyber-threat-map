@@ -47,14 +47,14 @@ export default function Map() {
       <MapHeader />
       <Legend />
       <AttackDetail />
-      <ComposableMap style={{ width: "100%", height: "100vh", backgroundColor: "#141318" }}>
+      <ComposableMap style={{ width: "100%", height: "100vh", backgroundColor: "#2A2B2B" }}>
         <Geographies geography="/features.json">
           {({ geographies }) =>
             geographies.map((geo: any) => (
               <Geography
                 style={{
                   default: {
-                    fill: "#4F4A4F",
+                    fill: "#9C9D9C",
                   },
                   hover: {
                     fill: "#EE0D5C",
@@ -63,7 +63,7 @@ export default function Map() {
                     fill: "#63141C",
                   },
                 }}
-                fill="#141318"
+                fill="#2A2B2B"
                 stroke="#141318"
                 strokeWidth={0.5}
                 key={geo.rsmKey}

@@ -11,10 +11,9 @@ export default function DynamicAttackDetail({ title, data }: TTopTenProps) {
   return (
     <Box
       sx={{
-        width: "300px",
+        width: "100%",
         color: "white",
         zIndex: 999,
-        position: "absolute",
         marginLeft: "24px",
         padding: "12px",
         backgroundColor: "#161618",

@@ -7,33 +7,29 @@ import DynamicAttackDetail from "./DynamicAttackDetail";
 export default function AttackDetail() {
   const [expandLegend, setExpandLegend] = useState<boolean>(true);
   return (
-    <Box>
-      <Box
-        sx={{
-          position: "absolute",
-          left: "20%",
-          bottom: "160px",
-        }}
-      >
-        <TopTen icon='/icon/Top Ten Attack.svg' title="TOP 10 ATTACK" data={topAttacker} />
+    <Box
+      sx={{
+        bottom: "12px",
+        position: "absolute",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "-webkit-fill-available",
+        gap: "36px",
+      }}
+    >
+      <Box sx={{ width: "160px" }}>
+        <TopTen iconicColor="#E53F3E" icon="/icon/Top Ten Attack.svg" title="TOP 10 ATTACK" data={topAttacker} />
       </Box>
-      <Box
-        sx={{
-          position: "absolute",
-          left: "34.8%",
-          bottom: "160px",
-        }}
-      >
+      <Box sx={{ width: "300px" }}>
         <DynamicAttackDetail title="TOP 10 ATTACK" data={topAttacker} />
       </Box>
       <Box
         sx={{
-          position: "absolute",
-          left: "60%",
-          bottom: "160px",
+          width: "160px",
         }}
       >
-        <TopTen icon='/icon/Top Ten Attacked.svg' title="TOP 10 ATTACKED" data={topAttacked} />
+        <TopTen iconicColor="#4E71E8" icon="/icon/Top Ten Attacked.svg" title="TOP 10 ATTACKED" data={topAttacked} />
       </Box>
     </Box>
   );
