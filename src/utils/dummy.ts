@@ -1,3 +1,15 @@
+export const mapLegends = [
+  { icon: "icon", name: "External Low Attack" },
+  { icon: "icon", name: "External Medium Attack" },
+  { icon: "icon", name: "External High Attack" },
+  { icon: "icon", name: "External Critical Attack" },
+  { icon: "icon", name: "Internal Low Attack" },
+  { icon: "icon", name: "External Medium Attack" },
+  { icon: "icon", name: "External Hight Attack" },
+  { icon: "icon", name: "External Critical Attack" },
+  { icon: "icon", name: "Defence" },
+];
+
 export const dummyCoordinate = [
   {
     coordinate: {

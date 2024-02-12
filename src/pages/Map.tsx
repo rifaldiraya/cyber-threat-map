@@ -3,6 +3,7 @@ import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 import AttackPoint from "../components/AttackPoint";
 import { dummyCoordinate } from "../utils/dummy";
 import MapHeader from "../components/MapHeader";
+import Legend from "../components/Legend";
 
 const geoUrl = "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json";
 
@@ -30,7 +31,7 @@ export default function Map() {
   const DisplayMultipleAttack = useCallback(
     () => (
       <AttackPoint
-        city={dummyCoordinate[attackTemp].city}
+        city={dummyCoordinate[attackMultipleTemp].city}
         color={dummyCoordinate[attackMultipleTemp].color}
         from={dummyCoordinate[attackMultipleTemp].coordinate.from}
         to={dummyCoordinate[attackMultipleTemp].coordinate.to}
@@ -42,6 +43,7 @@ export default function Map() {
   return (
     <div>
       <MapHeader />
+      <Legend />
       <ComposableMap style={{ backgroundColor: "#141318" }}>
         <Geographies geography="/features.json">
           {({ geographies }) =>
