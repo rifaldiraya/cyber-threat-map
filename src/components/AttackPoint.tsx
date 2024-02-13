@@ -28,10 +28,10 @@ export default function AttackPoint({ from, to, color, city }: TAttackPoint) {
           strokeLinecap: "round",
         }}
       >
-        <text x="-8" y={-8} fill="white" fontSize={4}>
+        <text x="-8" y={-10} fill="white" fontSize={8}>
           Attack from
         </text>
-        <text x="-8" fill="white" fontSize={6}>
+        <text x="-8" fill="white" fontSize={10}>
           {city.from}
         </text>
       </Annotation>
@@ -46,10 +46,10 @@ export default function AttackPoint({ from, to, color, city }: TAttackPoint) {
           strokeLinecap: "round",
         }}
       >
-        <text x="-8" y={-8} fill="white" fontSize={4}>
+        <text x="-8" y={-10} fill="white" fontSize={8}>
           Attack to
         </text>
-        <text x="-8" fill="white" fontSize={6}>
+        <text x="-8" fill="white" fontSize={10}>
           {city.to}
         </text>
       </Annotation>
