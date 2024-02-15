@@ -16,11 +16,11 @@ export const mapLegends = [
 export const dummyCoordinate = [
   {
     coordinate: {
-      from: [14.006, 30.7128],
+      from: [111.006, -7.7128],
       to: [379, 360],
     },
     city: {
-      from: "Tripoli, Libya",
+      from: "Semarang, Indonesia",
       to: "Republik Democratik Congo",
     },
     attackType: "critical",
@@ -29,11 +29,11 @@ export const dummyCoordinate = [
   },
   {
     coordinate: {
-      from: [14.006, 30.7128],
+      from: [111.006, -7.7128],
       to: [379, 380],
     },
     city: {
-      from: "Tripoli, Libya",
+      from: "Semarang, Indonesia",
       to: "Am Timan, Chad",
     },
     attackType: "high",
@@ -42,12 +42,12 @@ export const dummyCoordinate = [
   },
   {
     coordinate: {
-      from: [14.006, 30.7128],
-      to: [260, 380],
+      from: [111.006, -7.7128],
+      to: [450, 400],
     },
     city: {
-      from: "Tripoli, Libya",
-      to: "Celaya, Mexico",
+      from: "Semarang, Indonesia",
+      to: "Beijing, China",
     },
     attackType: "medium",
     color: "#ffb72d",
@@ -55,12 +55,12 @@ export const dummyCoordinate = [
   },
   {
     coordinate: {
-      from: [14.006, 30.7128],
-      to: [280, 400],
+      from: [111.006, -7.7128],
+      to: [120.006, -23.7128],
     },
     city: {
-      from: "Tripoli, Libya",
-      to: "Alabama, USA",
+      from: "Semarang, Indonesia",
+      to: "Sydney, Australia",
     },
     attackType: "low",
     color: "#73FE01",
@@ -68,11 +68,11 @@ export const dummyCoordinate = [
   },
   {
     coordinate: {
-      from: [14.006, 30.7128],
+      from: [111.006, -7.7128],
       to: [450, 385],
     },
     city: {
-      from: "Tripoli, Libya",
+      from: "Semarang, Indonesia",
       to: "Bandipur, Nepal",
     },
     attackType: "low",
