@@ -16,12 +16,12 @@ export const mapLegends = [
 export const dummyCoordinate = [
   {
     coordinate: {
-      from: [111.006, -7.7128],
-      to: [379, 360],
+      from: [379, 360],
+      to: [111.006, -7.7128],
     },
     city: {
-      from: "Semarang, Indonesia",
-      to: "Republik Democratik Congo",
+      to: "Semarang, Indonesia",
+      from: "Republik Democratik Congo",
     },
     attackType: "critical",
     color: "#B240B4",
@@ -29,12 +29,12 @@ export const dummyCoordinate = [
   },
   {
     coordinate: {
-      from: [111.006, -7.7128],
-      to: [379, 380],
+      to: [111.006, -7.7128],
+      from: [379, 380],
     },
     city: {
-      from: "Semarang, Indonesia",
-      to: "Am Timan, Chad",
+      to: "Semarang, Indonesia",
+      from: "Am Timan, Chad",
     },
     attackType: "high",
     color: "#FF1D25",
@@ -42,12 +42,12 @@ export const dummyCoordinate = [
   },
   {
     coordinate: {
-      from: [111.006, -7.7128],
-      to: [450, 400],
+      to: [111.006, -7.7128],
+      from: [450, 400],
     },
     city: {
-      from: "Semarang, Indonesia",
-      to: "Beijing, China",
+      to: "Semarang, Indonesia",
+      from: "Beijing, China",
     },
     attackType: "medium",
     color: "#ffb72d",
@@ -55,12 +55,12 @@ export const dummyCoordinate = [
   },
   {
     coordinate: {
-      from: [111.006, -7.7128],
-      to: [120.006, -23.7128],
+      to: [111.006, -7.7128],
+      from: [120.006, -23.7128],
     },
     city: {
-      from: "Semarang, Indonesia",
-      to: "Sydney, Australia",
+      to: "Semarang, Indonesia",
+      from: "Sydney, Australia",
     },
     attackType: "low",
     color: "#73FE01",
@@ -68,12 +68,12 @@ export const dummyCoordinate = [
   },
   {
     coordinate: {
-      from: [111.006, -7.7128],
-      to: [450, 385],
+      to: [111.006, -7.7128],
+      from: [450, 385],
     },
     city: {
-      from: "Semarang, Indonesia",
-      to: "Bandipur, Nepal",
+      to: "Semarang, Indonesia",
+      from: "Bandipur, Nepal",
     },
     attackType: "low",
     color: "#73FE01",
