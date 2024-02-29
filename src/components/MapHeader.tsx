@@ -14,8 +14,8 @@ export default function MapHeader() {
         flexDirection: "column",
       }}
     >
-      <div style={{ fontSize: "24px", fontWeight: "bold" }}>PT. PERTAMINA GEOTHERMAL ENERGY (TBK)</div>
-      <div style={{ fontSize: "18px", color: "#B3B3B3" }}>GLOBAL CYBER THREAT MAP</div>
+      <div style={{ fontSize: "24px", fontWeight: "bold" }}>PT. PERTAMINA GEOTHERMAL ENERGY (TBK) - GLOBAL CYBER THREAT MAP</div>
+      <div style={{ fontSize: "18px", color: "#B3B3B3" }}>Navigating the Digital Battlefield</div>
     </div>
   );
 }
