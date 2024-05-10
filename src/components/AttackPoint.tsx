@@ -57,7 +57,7 @@ export default function AttackPoint({ from, to, color, city }: TAttackPoint) {
       <Marker className="marker" coordinates={to}>
         <g id="content">
           <g className="cls-1">
-            <circle className="cls-2" style={{ fill: color }} r={6} />
+            <circle className="cls-2" style={{ fill: color }} r={12} />
           </g>
           <circle className="cls-2" style={{ fill: color }} r={2} />
         </g>
